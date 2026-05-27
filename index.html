@@ -1,697 +1,933 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoldCoin (GLD) — A Moeda da Nova Era</title>
-  <meta name="description" content="GoldCoin não é apenas uma criptomoeda. É um movimento global de transformação, liderado pela visão da Igreja da Revelação Dourada." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoldCoin (GLD) — A Moeda da Nova Era</title>
+    <meta
+      name="description"
+      content="GoldCoin não é apenas uma criptomoeda. É um movimento global de transformação, liderado pela visão da Igreja da Revelação Dourada."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- PARTICLES BACKGROUND -->
+    <canvas id="particles-canvas"></canvas>
 
-  <!-- PARTICLES BACKGROUND -->
-  <canvas id="particles-canvas"></canvas>
-
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#inicio" class="nav-logo">
-        <div class="logo-emblem">G</div>
-        <div class="logo-text">
-          <span class="logo-name">GOLDCOIN</span>
-          <span class="logo-tagline">A Moeda da Nova Era</span>
-        </div>
-      </a>
-      <div class="nav-links" id="nav-links">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#ecossistema">Ecossistema</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#whitepaper">Whitepaper</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contactos">Contactos</a>
-      </div>
-      <a href="#comprar" class="btn-buy">Comprar GLD</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="inicio" class="hero">
-    <div class="hero-radial"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        GLD disponível na App Oficial — Puerto Esperanza
-      </div>
-      <h1 class="hero-title">
-        <span class="line reveal-line" style="--d:0.1s">Alinhamento.</span>
-        <span class="line reveal-line" style="--d:0.3s">Propósito.</span>
-        <span class="line reveal-line gold-line" style="--d:0.5s">Abundância.</span>
-      </h1>
-      <p class="hero-sub reveal-fade" style="--d:0.7s">
-        O Futuro é Agora.
-      </p>
-      <p class="hero-desc reveal-fade" style="--d:0.9s">
-        GoldCoin não é apenas uma criptomoeda.<br/>
-        É um movimento global de transformação, liderado pela visão da Igreja da Revelação Dourada.
-      </p>
-      <div class="hero-actions reveal-fade" style="--d:1.1s">
-        <a href="#comprar" class="btn-primary">
-          <span>Comprar GoldCoin</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#inicio" class="nav-logo">
+          <div class="logo-emblem">  <img src="assets/goldcoin-logo.png" alt="">  </div>
+          <div class="logo-text">
+            <span class="logo-name">GOLDCOIN</span>
+            <span class="logo-tagline">A Moeda da Nova Era</span>
+          </div>
         </a>
-        <a href="#whitepaper" class="btn-secondary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
-          Ver Whitepaper
-        </a>
-      </div>
-      <div class="hero-audit reveal-fade" style="--d:1.3s">
-        <div class="audit-badge">
-          <div class="audit-icon">IRD</div>
-          <span>IRD Security Protocol</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-coin reveal-coin">
-      <div class="coin-glow"></div>
-      <div class="coin-ring"></div>
-      <div class="coin-body">
-        <div class="coin-inner">
-          <div class="coin-letter">G</div>
-          <div class="coin-cross">✝</div>
-          <div class="coin-eye">👁</div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="ticker-bar">
-    <div class="ticker-inner">
-      <div class="ticker-item">
-        <span class="ticker-label">GLD/USD</span>
-        <span class="ticker-value" id="price-ticker">2.208,08 $</span>
-        <span class="ticker-change positive">+6.24%</span>
-      </div>
-      <div class="ticker-sep">◆</div>
-      <div class="ticker-item">
-        <span class="ticker-label">Supply Máximo</span>
-        <span class="ticker-value">7.777.777 GLD</span>
-      </div>
-      <div class="ticker-sep">◆</div>
-      <div class="ticker-item">
-        <span class="ticker-label">Volume 24h</span>
-        <span class="ticker-value">31.448,91 $</span>
-        <span class="ticker-change positive">↑</span>
-      </div>
-      <div class="ticker-sep">◆</div>
-      <div class="ticker-item">
-        <span class="ticker-label">Holders Ativos</span>
-        <span class="ticker-value">128.642</span>
-      </div>
-      <div class="ticker-sep">◆</div>
-      <div class="ticker-item">
-        <span class="ticker-label">Países</span>
-        <span class="ticker-value">24</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card" data-delay="0">
-          <div class="stat-icon">◎</div>
-          <div class="stat-number" data-target="7777777">0</div>
-          <div class="stat-label">Supply Máximo GLD</div>
-        </div>
-        <div class="stat-card" data-delay="1">
-          <div class="stat-icon">◈</div>
-          <div class="stat-number price-display">2.208,08$</div>
-          <div class="stat-label">Preço Atual <span class="stat-badge positive">+6.24%</span></div>
-        </div>
-        <div class="stat-card" data-delay="2">
-          <div class="stat-icon">◉</div>
-          <div class="stat-number" data-target="128642">0</div>
-          <div class="stat-label">Holders Ativos</div>
-        </div>
-        <div class="stat-card" data-delay="3">
-          <div class="stat-icon">◑</div>
-          <div class="stat-number" data-target="24">0</div>
-          <div class="stat-label">Países Presentes</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="section sobre-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">O Que é</div>
-        <h2 class="section-title">GoldCoin?</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="sobre-grid">
-        <div class="sobre-text">
-          <p class="sobre-lead">GoldCoin (GLD) é a criptomoeda oficial do ecossistema da Igreja da Revelação Dourada.</p>
-          <p>Criada para unir tecnologia, propósito e espiritualidade, a GoldCoin impulsiona uma nova economia baseada em fé, confiança e alinhamento. Não é apenas um ativo digital — é um símbolo de alinhamento, abundância e visão coletiva.</p>
-          <p>Funcionando sobre o protocolo <strong>IRD Chain</strong>, com mecanismo de consenso <strong>Proof of Alignment™</strong>, a GoldCoin redefine o que significa ter valor.</p>
-          <a href="#sobre" class="btn-outline">Saber Mais →</a>
-        </div>
-        <div class="sobre-pillars">
-          <div class="pillar">
-            <div class="pillar-icon">✝</div>
-            <h3>Fé</h3>
-            <p>Mais do que uma moeda. É um propósito que transcende o mercado.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">◎</div>
-            <h3>Alinhamento</h3>
-            <p>Conecte-se a uma visão maior. Cada transação fortalece a comunidade.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">✦</div>
-            <h3>Abundância</h3>
-            <p>Construímos valor juntos. O crescimento é coletivo e sustentável.</p>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">⬡</div>
-            <h3>Confiança</h3>
-            <p>Transparência, segurança e estabilidade em cada bloco da cadeia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ECOSSISTEMA -->
-  <section id="ecossistema" class="section eco-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">Onde Usar</div>
-        <h2 class="section-title">Ecossistema GoldCoin</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-        <p class="section-desc">A GoldCoin não é apenas uma moeda. É uma ferramenta de alinhamento organizacional que opera em múltiplas dimensões da Nova Era.</p>
-      </div>
-      <div class="eco-grid">
-        <div class="eco-card featured">
-          <div class="eco-card-glow"></div>
-          <div class="eco-icon">◈</div>
-          <h3>Eventos VIP</h3>
-          <p>Acesso exclusivo a retiros, conferências e experiências transformadoras da Igreja da Revelação Dourada.</p>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">◎</div>
-          <h3>Cursos e Mentorias</h3>
-          <p>Aprenda com os melhores líderes de alinhamento e evolua a nível pessoal, profissional e espiritual.</p>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">⬡</div>
-          <h3>Loja Oficial</h3>
-          <p>Produtos oficiais da Igreja da Revelação Dourada — merchandising, livros e materiais de estudo.</p>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">✦</div>
-          <h3>Contribuições</h3>
-          <p>Contribua para o avanço da obra e da comunidade. Cada GLD transferido fortalece a missão.</p>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">◉</div>
-          <h3>Investimentos</h3>
-          <p>Participe em projetos com visão e propósito dentro do ecossistema de Puerto Esperanza.</p>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">✝</div>
-          <h3>Retiros Executivos</h3>
-          <p>Experiências de liderança transformacional para empresários alinhados com a Nova Era.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOKENOMICS -->
-  <section id="tokenomics" class="section token-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">Distribuição</div>
-        <h2 class="section-title">Tokenomics</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="token-grid">
-        <div class="token-info">
-          <div class="token-specs">
-            <div class="spec-row">
-              <span class="spec-key">Nome</span>
-              <span class="spec-val">GoldCoin</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Símbolo</span>
-              <span class="spec-val highlight">GLD</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Supply Máximo</span>
-              <span class="spec-val highlight">7.777.777 GLD</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Blockchain</span>
-              <span class="spec-val">IRD Chain Protocol</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Consenso</span>
-              <span class="spec-val">Proof of Alignment™</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-key">Decimais</span>
-              <span class="spec-val">8</span>
-            </div>
-          </div>
-          <div class="proof-block">
-            <h4>Proof of Alignment™</h4>
-            <p>Diferente de sistemas baseados apenas em mineração e poder computacional, a GoldCoin utiliza um conceito revolucionário. Utilizadores que:</p>
-            <ul>
-              <li>✓ Contribuem para a comunidade</li>
-              <li>✓ Mantêm estabilidade emocional</li>
-              <li>✓ Participam em eventos</li>
-              <li>✓ Fortalecem a visão</li>
-            </ul>
-            <p>...recebem benefícios dentro do ecossistema.</p>
-          </div>
-        </div>
-        <div class="token-chart-area">
-          <div class="donut-wrapper">
-            <svg class="donut-chart" viewBox="0 0 200 200">
-              <circle class="donut-ring" cx="100" cy="100" r="70" fill="transparent" stroke="#1a1208" stroke-width="40"/>
-              <!-- 40% Comunidade -->
-              <circle class="donut-seg seg-1" cx="100" cy="100" r="70" fill="transparent"
-                stroke="#C9A227" stroke-width="40"
-                stroke-dasharray="175.9 263.9" stroke-dashoffset="0"/>
-              <!-- 20% Ecossistema -->
-              <circle class="donut-seg seg-2" cx="100" cy="100" r="70" fill="transparent"
-                stroke="#8B6914" stroke-width="40"
-                stroke-dasharray="88.0 351.9" stroke-dashoffset="-175.9"/>
-              <!-- 15% Fundação -->
-              <circle class="donut-seg seg-3" cx="100" cy="100" r="70" fill="transparent"
-                stroke="#5C4A1E" stroke-width="40"
-                stroke-dasharray="66.0 373.9" stroke-dashoffset="-263.9"/>
-              <!-- 15% Reserva -->
-              <circle class="donut-seg seg-4" cx="100" cy="100" r="70" fill="transparent"
-                stroke="#3D3010" stroke-width="40"
-                stroke-dasharray="66.0 373.9" stroke-dashoffset="-329.9"/>
-              <!-- 10% Liquidez -->
-              <circle class="donut-seg seg-5" cx="100" cy="100" r="70" fill="transparent"
-                stroke="#2A2008" stroke-width="40"
-                stroke-dasharray="43.9 395.9" stroke-dashoffset="-395.9"/>
-            </svg>
-            <div class="donut-center">
-              <div class="donut-num">7.777.777</div>
-              <div class="donut-sub">GLD Total</div>
-            </div>
-          </div>
-          <div class="token-legend">
-            <div class="legend-item"><span class="legend-dot" style="background:#C9A227"></span>Comunidade — 40%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#8B6914"></span>Ecossistema — 20%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#5C4A1E"></span>Fundação IRD — 15%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#3D3010"></span>Reserva Estratégica — 15%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:#2A2008"></span>Liquidez — 10%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROADMAP -->
-  <section id="roadmap" class="section road-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">A Jornada</div>
-        <h2 class="section-title">Roadmap</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="roadmap-track">
-        <div class="road-phase completed">
-          <div class="phase-marker">
-            <div class="phase-num">01</div>
-            <div class="phase-line"></div>
-          </div>
-          <div class="phase-card">
-            <div class="phase-status completed-badge">✓ Concluído</div>
-            <h3>A Revelação</h3>
-            <ul>
-              <li>Lançamento Oficial</li>
-              <li>Comunidade Inicial</li>
-              <li>Primeiras Wallets</li>
-            </ul>
-          </div>
-        </div>
-        <div class="road-phase active">
-          <div class="phase-marker">
-            <div class="phase-num">02</div>
-            <div class="phase-line"></div>
-          </div>
-          <div class="phase-card">
-            <div class="phase-status active-badge">⚡ Em Andamento</div>
-            <h3>A Expansão</h3>
-            <ul>
-              <li>Integração Empresarial</li>
-              <li>Workshops Corporate</li>
-              <li>Ecossistema de Benefícios</li>
-            </ul>
-          </div>
-        </div>
-        <div class="road-phase upcoming">
-          <div class="phase-marker">
-            <div class="phase-num">03</div>
-            <div class="phase-line"></div>
-          </div>
-          <div class="phase-card">
-            <div class="phase-status upcoming-badge">◎ Em Breve</div>
-            <h3>O Alinhamento</h3>
-            <ul>
-              <li>Eventos Globais</li>
-              <li>Integração Social</li>
-              <li>Marketplace GoldCoin</li>
-            </ul>
-          </div>
-        </div>
-        <div class="road-phase future">
-          <div class="phase-marker">
-            <div class="phase-num">04</div>
-          </div>
-          <div class="phase-card">
-            <div class="phase-status future-badge">◈ Futuro</div>
-            <h3>A Nova Era</h3>
-            <ul>
-              <li>Economia Descentralizada</li>
-              <li>Expansão Institucional</li>
-              <li>Revelação Financeira Completa</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHITEPAPER -->
-  <section id="whitepaper" class="section wp-section">
-    <div class="wp-bg-pattern"></div>
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">Documento Oficial</div>
-        <h2 class="section-title">Whitepaper</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-        <p class="section-desc">Versão 1.0 — Fundação GoldCoin International</p>
-      </div>
-      <div class="wp-grid">
-        <div class="wp-cover">
-          <div class="wp-cover-inner">
-            <div class="wp-logo">G</div>
-            <div class="wp-cover-title">GOLDCOIN</div>
-            <div class="wp-cover-sub">THE CURRENCY OF THE NEW ERA</div>
-            <div class="wp-divider">◆ ◆ ◆</div>
-            <div class="wp-version">WHITEPAPER OFICIAL — VERSÃO 1.0</div>
-            <div class="wp-org">FUNDAÇÃO GOLDCOIN INTERNATIONAL</div>
-          </div>
-        </div>
-        <div class="wp-chapters">
-          <div class="wp-chapter">
-            <span class="ch-num">01</span>
-            <div>
-              <h4>A Revelação</h4>
-              <p>O sistema financeiro moderno tornou-se rápido... mas vazio. A GoldCoin nasce como resposta.</p>
-            </div>
-          </div>
-          <div class="wp-chapter">
-            <span class="ch-num">02</span>
-            <div>
-              <h4>O Que é a GoldCoin?</h4>
-              <p>Uma criptomoeda descentralizada de nova geração criada para unir comunidade, propósito e espiritualidade moderna.</p>
-            </div>
-          </div>
-          <div class="wp-chapter">
-            <span class="ch-num">03–04</span>
-            <div>
-              <h4>Missão & Visão</h4>
-              <p>Tornar-se a principal moeda de integração social, empresarial e espiritual da nova era.</p>
-            </div>
-          </div>
-          <div class="wp-chapter">
-            <span class="ch-num">05</span>
-            <div>
-              <h4>Tokenomics</h4>
-              <p>Supply máximo de 7.777.777 GLD com distribuição desenhada para garantir crescimento sustentável.</p>
-            </div>
-          </div>
-          <div class="wp-chapter">
-            <span class="ch-num">06</span>
-            <div>
-              <h4>Proof of Alignment™</h4>
-              <p>Um conceito revolucionário onde o alinhamento comunitário gera valor real dentro da rede.</p>
-            </div>
-          </div>
-          <div class="wp-chapter">
-            <span class="ch-num">07–12</span>
-            <div>
-              <h4>Roadmap, Segurança & Futuro</h4>
-              <p>A visão completa para a economia descentralizada da Nova Era e a mensagem final do Pastor Gaspar Dourado.</p>
-            </div>
-          </div>
-          <a href="#" class="btn-primary wp-download" onclick="return false;">
-            <span>Descarregar Whitepaper PDF</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <section class="quote-section">
-    <div class="container">
-      <div class="quote-block">
-        <div class="quote-mark">"</div>
-        <blockquote>
-          O ouro sempre representou eternidade.<br/>
-          A blockchain apenas revelou aquilo<br/>
-          que Deus já sabia.
-        </blockquote>
-        <div class="quote-author">— Pastor Gaspar Dourado</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPRAR -->
-  <section id="comprar" class="section buy-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">Junta-te à Nova Era</div>
-        <h2 class="section-title">Comprar GoldCoin</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="buy-steps">
-        <div class="buy-step">
-          <div class="step-num">1</div>
-          <h4>Cria a tua Wallet</h4>
-          <p>Descarrega a App Oficial GoldCoin e configura a tua carteira digital em menos de 2 minutos.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="buy-step">
-          <div class="step-num">2</div>
-          <h4>Verifica a tua Identidade</h4>
-          <p>Processo de verificação simples e seguro, protegido pelo IRD Security Protocol.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="buy-step">
-          <div class="step-num">3</div>
-          <h4>Adquire GLD</h4>
-          <p>Compra GoldCoin com cartão, transferência bancária ou troca por outras criptomoedas.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="buy-step">
-          <div class="step-num">4</div>
-          <h4>Entra no Ecossistema</h4>
-          <p>Começa a usar GLD em eventos, cursos, loja oficial e muito mais dentro da comunidade.</p>
-        </div>
-      </div>
-      <div class="buy-cta">
-        <a href="#" class="btn-primary btn-large" onclick="return false;">
-          <span>Começar Agora</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <p class="buy-note">Disponível na App Store e Google Play — Puerto Esperanza</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section faq-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">Dúvidas Frequentes</div>
-        <h2 class="section-title">FAQ</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">O que é a GoldCoin (GLD)?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">
-            <p>GoldCoin (GLD) é a criptomoeda oficial do ecossistema da Igreja da Revelação Dourada dentro do servidor de roleplay Puerto Esperanza. Criada para unir tecnologia, propósito e espiritualidade, funciona sobre o protocolo IRD Chain com mecanismo de consenso Proof of Alignment™.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Como posso comprar GoldCoin?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">
-            <p>Podes adquirir GLD através da App Oficial GoldCoin, disponível para iOS e Android. O processo é simples: cria uma wallet, verifica a tua identidade pelo IRD Security Protocol, e compra com cartão, transferência ou troca por outras criptomoedas.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">O que é o Proof of Alignment™?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">
-            <p>Proof of Alignment™ é o mecanismo de consenso revolucionário da GoldCoin. Diferente de sistemas baseados apenas em poder computacional, premia utilizadores que contribuem para a comunidade, mantêm estabilidade emocional, participam em eventos e fortalecem a visão coletiva.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Qual é o supply total de GLD?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">
-            <p>O supply máximo de GoldCoin é de 7.777.777 GLD — um número com profundo significado simbólico. A distribuição foi desenhada para garantir crescimento sustentável: 40% para a comunidade, 20% para o ecossistema, 15% para a Fundação IRD, 15% para reserva estratégica, e 10% para liquidez.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Onde posso usar GoldCoin?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">
-            <p>Dentro do ecossistema da Igreja da Revelação Dourada em Puerto Esperanza, podes usar GLD em eventos VIP, cursos e mentorias, retiros executivos, cursos da Revelação Dourada, livros, merchandising oficial, mentorias, experiências exclusivas e contribuições comunitárias.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">É seguro investir em GoldCoin?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">
-            <p>A GoldCoin opera com total transparência e estabilidade. Todos os protocolos são desenvolvidos com transparência, estabilidade e visão de longo prazo. O IRD Security Protocol garante a segurança de todas as transações e wallets dentro do ecossistema.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section">
-    <div class="container">
-      <div class="newsletter-inner">
-        <div class="newsletter-text">
-          <h3>Receba Novidades</h3>
-          <p>Inscreva-se e receba atualizações exclusivas sobre o ecossistema GoldCoin e a Nova Era.</p>
-        </div>
-        <div class="newsletter-form">
-          <input type="email" placeholder="O seu email" class="email-input" />
-          <button class="btn-primary" onclick="handleSubscribe(event)">Inscrever</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTOS -->
-  <section id="contactos" class="section contact-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-eyebrow">Fale Connosco</div>
-        <h2 class="section-title">Contactos</h2>
-        <div class="title-ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon">✉</div>
-          <h4>Email</h4>
-          <p>info@goldcoin.ird</p>
-          <p>suporte@goldcoin.ird</p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">◎</div>
-          <h4>Comunidade</h4>
-          <p>Junta-te ao nosso grupo oficial em Puerto Esperanza e conecta-te com outros holders.</p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">⬡</div>
-          <h4>Redes Sociais</h4>
-          <div class="social-links">
-            <a href="#" onclick="return false;">Instagram</a>
-            <a href="#" onclick="return false;">YouTube</a>
-            <a href="#" onclick="return false;">Telegram</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-emblem small">G</div>
-            <div class="logo-text">
-              <span class="logo-name">GOLDCOIN</span>
-              <span class="logo-tagline">A Moeda da Nova Era</span>
-            </div>
-          </div>
-          <p class="footer-about">GoldCoin é a criptomoeda oficial do ecossistema da Igreja da Revelação Dourada em Puerto Esperanza.</p>
-          <div class="footer-social">
-            <a href="#" onclick="return false;" aria-label="Instagram">◈</a>
-            <a href="#" onclick="return false;" aria-label="YouTube">◉</a>
-            <a href="#" onclick="return false;" aria-label="Twitter">◎</a>
-            <a href="#" onclick="return false;" aria-label="Telegram">⬡</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h5>GoldCoin</h5>
+        <div class="nav-links" id="nav-links">
+          <a href="#inicio">Início</a>
           <a href="#sobre">Sobre</a>
-          <a href="#comprar">Como Comprar</a>
-          <a href="#tokenomics">Wallet</a>
+          <a href="#ecossistema">Ecossistema</a>
+          <a href="#tokenomics">Tokenomics</a>
+          <a href="#roadmap">Roadmap</a>
           <a href="#whitepaper">Whitepaper</a>
-        </div>
-        <div class="footer-col">
-          <h5>Suporte</h5>
           <a href="#faq">FAQ</a>
-          <a href="#contactos">Centro de Ajuda</a>
           <a href="#contactos">Contactos</a>
         </div>
-        <div class="footer-col">
-          <h5>Legal</h5>
-          <a href="#" onclick="return false;">Termos de Uso</a>
-          <a href="#" onclick="return false;">Política de Privacidade</a>
-          <a href="#" onclick="return false;">Aviso Legal</a>
+        <a href="#comprar" class="btn-buy">Comprar GLD</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-radial"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          GLD disponível na App Oficial — Puerto Esperanza
+        </div>
+        <h1 class="hero-title">
+          <span class="line reveal-line" style="--d: 0.1s">Alinhamento.</span>
+          <span class="line reveal-line" style="--d: 0.3s">Propósito.</span>
+          <span class="line reveal-line gold-line" style="--d: 0.5s"
+            >Abundância.</span
+          >
+        </h1>
+        <p class="hero-sub reveal-fade" style="--d: 0.7s">O Futuro é Agora.</p>
+        <p class="hero-desc reveal-fade" style="--d: 0.9s">
+          GoldCoin não é apenas uma criptomoeda.<br />
+          É um movimento global de transformação, liderado pela visão da Igreja
+          da Revelação Dourada.
+        </p>
+        <div class="hero-actions reveal-fade" style="--d: 1.1s">
+          <a href="#comprar" class="btn-primary">
+            <span>Comprar GoldCoin</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#whitepaper" class="btn-secondary">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14,2 14,8 20,8" />
+            </svg>
+            Ver Whitepaper
+          </a>
+        </div>
+        <div class="hero-audit reveal-fade" style="--d: 1.3s">
+          <div class="audit-badge">
+            <div class="audit-icon">IRD</div>
+            <span>IRD Security Protocol</span>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2024 Igreja da Revelação Dourada — Puerto Esperanza. Todos os direitos reservados.</p>
-        <p class="footer-disclaimer">Este é um projeto fictício para roleplay. GoldCoin não é uma criptomoeda real. Qualquer semelhança com projetos reais é meramente coincidência.</p>
+      <div class="hero-coin reveal-coin">
+        <div class="coin-glow"></div>
+        <div class="coin-ring"></div>
+        <div class="coin-body">
+          <div class="coin-inner">
+            <div class="coin-letter"> <img src="assets/goldcoin-logo.png" alt=""></div>
+            <div class="coin-cross">✝</div>
+            <div class="coin-eye">👁</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker-bar">
+      <div class="ticker-inner">
+        <div class="ticker-item">
+          <span class="ticker-label">GLD/USD</span>
+          <span class="ticker-value" id="price-ticker">2.208,08 $</span>
+          <span class="ticker-change positive">+6.24%</span>
+        </div>
+        <div class="ticker-sep">◆</div>
+        <div class="ticker-item">
+          <span class="ticker-label">Supply Máximo</span>
+          <span class="ticker-value">7.777.777 GLD</span>
+        </div>
+        <div class="ticker-sep">◆</div>
+        <div class="ticker-item">
+          <span class="ticker-label">Volume 24h</span>
+          <span class="ticker-value">31.448,91 $</span>
+          <span class="ticker-change positive">↑</span>
+        </div>
+        <div class="ticker-sep">◆</div>
+        <div class="ticker-item">
+          <span class="ticker-label">Holders Ativos</span>
+          <span class="ticker-value">128.642</span>
+        </div>
+        <div class="ticker-sep">◆</div>
+        <div class="ticker-item">
+          <span class="ticker-label">Países</span>
+          <span class="ticker-value">24</span>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <script src="js/main.js"></script>
-</body>
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card" data-delay="0">
+            <div class="stat-icon">◎</div>
+            <div class="stat-number" data-target="7777777">0</div>
+            <div class="stat-label">Supply Máximo GLD</div>
+          </div>
+          <div class="stat-card" data-delay="1">
+            <div class="stat-icon">◈</div>
+            <div class="stat-number price-display">2.208,08$</div>
+            <div class="stat-label">
+              Preço Atual <span class="stat-badge positive">+6.24%</span>
+            </div>
+          </div>
+          <div class="stat-card" data-delay="2">
+            <div class="stat-icon">◉</div>
+            <div class="stat-number" data-target="128642">0</div>
+            <div class="stat-label">Holders Ativos</div>
+          </div>
+          <div class="stat-card" data-delay="3">
+            <div class="stat-icon">◑</div>
+            <div class="stat-number" data-target="24">0</div>
+            <div class="stat-label">Países Presentes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section sobre-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">O Que é</div>
+          <h2 class="section-title">GoldCoin?</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <p class="sobre-lead">
+              GoldCoin (GLD) é a criptomoeda oficial do ecossistema da Igreja da
+              Revelação Dourada.
+            </p>
+            <p>
+              Criada para unir tecnologia, propósito e espiritualidade, a
+              GoldCoin impulsiona uma nova economia baseada em fé, confiança e
+              alinhamento. Não é apenas um ativo digital — é um símbolo de
+              alinhamento, abundância e visão coletiva.
+            </p>
+            <p>
+              Funcionando sobre o protocolo <strong>IRD Chain</strong>, com
+              mecanismo de consenso <strong>Proof of Alignment™</strong>, a
+              GoldCoin redefine o que significa ter valor.
+            </p>
+            <a href="#sobre" class="btn-outline">Saber Mais →</a>
+          </div>
+          <div class="sobre-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">✝</div>
+              <h3>Fé</h3>
+              <p>
+                Mais do que uma moeda. É um propósito que transcende o mercado.
+              </p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">◎</div>
+              <h3>Alinhamento</h3>
+              <p>
+                Conecte-se a uma visão maior. Cada transação fortalece a
+                comunidade.
+              </p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">✦</div>
+              <h3>Abundância</h3>
+              <p>
+                Construímos valor juntos. O crescimento é coletivo e
+                sustentável.
+              </p>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">⬡</div>
+              <h3>Confiança</h3>
+              <p>
+                Transparência, segurança e estabilidade em cada bloco da cadeia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSSISTEMA -->
+    <section id="ecossistema" class="section eco-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Onde Usar</div>
+          <h2 class="section-title">Ecossistema GoldCoin</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+          <p class="section-desc">
+            A GoldCoin não é apenas uma moeda. É uma ferramenta de alinhamento
+            organizacional que opera em múltiplas dimensões da Nova Era.
+          </p>
+        </div>
+        <div class="eco-grid">
+          <div class="eco-card featured">
+            <div class="eco-card-glow"></div>
+            <div class="eco-icon">◈</div>
+            <h3>Eventos VIP</h3>
+            <p>
+              Acesso exclusivo a retiros, conferências e experiências
+              transformadoras da Igreja da Revelação Dourada.
+            </p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon">◎</div>
+            <h3>Cursos e Mentorias</h3>
+            <p>
+              Aprenda com os melhores líderes de alinhamento e evolua a nível
+              pessoal, profissional e espiritual.
+            </p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon">⬡</div>
+            <h3>Loja Oficial</h3>
+            <p>
+              Produtos oficiais da Igreja da Revelação Dourada — merchandising,
+              livros e materiais de estudo.
+            </p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon">✦</div>
+            <h3>Contribuições</h3>
+            <p>
+              Contribua para o avanço da obra e da comunidade. Cada GLD
+              transferido fortalece a missão.
+            </p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon">◉</div>
+            <h3>Investimentos</h3>
+            <p>
+              Participe em projetos com visão e propósito dentro do ecossistema
+              de Puerto Esperanza.
+            </p>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon">✝</div>
+            <h3>Retiros Executivos</h3>
+            <p>
+              Experiências de liderança transformacional para empresários
+              alinhados com a Nova Era.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="section token-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Distribuição</div>
+          <h2 class="section-title">Tokenomics</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="token-grid">
+          <div class="token-info">
+            <div class="token-specs">
+              <div class="spec-row">
+                <span class="spec-key">Nome</span>
+                <span class="spec-val">GoldCoin</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Símbolo</span>
+                <span class="spec-val highlight">GLD</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Supply Máximo</span>
+                <span class="spec-val highlight">7.777.777 GLD</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Blockchain</span>
+                <span class="spec-val">IRD Chain Protocol</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Consenso</span>
+                <span class="spec-val">Proof of Alignment™</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-key">Decimais</span>
+                <span class="spec-val">8</span>
+              </div>
+            </div>
+            <div class="proof-block">
+              <h4>Proof of Alignment™</h4>
+              <p>
+                Diferente de sistemas baseados apenas em mineração e poder
+                computacional, a GoldCoin utiliza um conceito revolucionário.
+                Utilizadores que:
+              </p>
+              <ul>
+                <li>✓ Contribuem para a comunidade</li>
+                <li>✓ Mantêm estabilidade emocional</li>
+                <li>✓ Participam em eventos</li>
+                <li>✓ Fortalecem a visão</li>
+              </ul>
+              <p>...recebem benefícios dentro do ecossistema.</p>
+            </div>
+          </div>
+          <div class="token-chart-area">
+            <div class="donut-wrapper">
+              <svg class="donut-chart" viewBox="0 0 200 200">
+                <circle
+                  class="donut-ring"
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="transparent"
+                  stroke="#1a1208"
+                  stroke-width="40"
+                />
+                <!-- 40% Comunidade -->
+                <circle
+                  class="donut-seg seg-1"
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="transparent"
+                  stroke="#C9A227"
+                  stroke-width="40"
+                  stroke-dasharray="175.9 263.9"
+                  stroke-dashoffset="0"
+                />
+                <!-- 20% Ecossistema -->
+                <circle
+                  class="donut-seg seg-2"
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="transparent"
+                  stroke="#8B6914"
+                  stroke-width="40"
+                  stroke-dasharray="88.0 351.9"
+                  stroke-dashoffset="-175.9"
+                />
+                <!-- 15% Fundação -->
+                <circle
+                  class="donut-seg seg-3"
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="transparent"
+                  stroke="#5C4A1E"
+                  stroke-width="40"
+                  stroke-dasharray="66.0 373.9"
+                  stroke-dashoffset="-263.9"
+                />
+                <!-- 15% Reserva -->
+                <circle
+                  class="donut-seg seg-4"
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="transparent"
+                  stroke="#3D3010"
+                  stroke-width="40"
+                  stroke-dasharray="66.0 373.9"
+                  stroke-dashoffset="-329.9"
+                />
+                <!-- 10% Liquidez -->
+                <circle
+                  class="donut-seg seg-5"
+                  cx="100"
+                  cy="100"
+                  r="70"
+                  fill="transparent"
+                  stroke="#2A2008"
+                  stroke-width="40"
+                  stroke-dasharray="43.9 395.9"
+                  stroke-dashoffset="-395.9"
+                />
+              </svg>
+              <div class="donut-center">
+                <div class="donut-num">7.777.777</div>
+                <div class="donut-sub">GLD Total</div>
+              </div>
+            </div>
+            <div class="token-legend">
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #c9a227"></span
+                >Comunidade — 40%
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #8b6914"></span
+                >Ecossistema — 20%
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #5c4a1e"></span
+                >Fundação IRD — 15%
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #3d3010"></span
+                >Reserva Estratégica — 15%
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="background: #2a2008"></span
+                >Liquidez — 10%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section road-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">A Jornada</div>
+          <h2 class="section-title">Roadmap</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="roadmap-track">
+          <div class="road-phase completed">
+            <div class="phase-marker">
+              <div class="phase-num">01</div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-card">
+              <div class="phase-status completed-badge">✓ Concluído</div>
+              <h3>A Revelação</h3>
+              <ul>
+                <li>Lançamento Oficial</li>
+                <li>Comunidade Inicial</li>
+                <li>Primeiras Wallets</li>
+              </ul>
+            </div>
+          </div>
+          <div class="road-phase active">
+            <div class="phase-marker">
+              <div class="phase-num">02</div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-card">
+              <div class="phase-status active-badge">⚡ Em Andamento</div>
+              <h3>A Expansão</h3>
+              <ul>
+                <li>Integração Empresarial</li>
+                <li>Workshops Corporate</li>
+                <li>Ecossistema de Benefícios</li>
+              </ul>
+            </div>
+          </div>
+          <div class="road-phase upcoming">
+            <div class="phase-marker">
+              <div class="phase-num">03</div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-card">
+              <div class="phase-status upcoming-badge">◎ Em Breve</div>
+              <h3>O Alinhamento</h3>
+              <ul>
+                <li>Eventos Globais</li>
+                <li>Integração Social</li>
+                <li>Marketplace GoldCoin</li>
+              </ul>
+            </div>
+          </div>
+          <div class="road-phase future">
+            <div class="phase-marker">
+              <div class="phase-num">04</div>
+            </div>
+            <div class="phase-card">
+              <div class="phase-status future-badge">◈ Futuro</div>
+              <h3>A Nova Era</h3>
+              <ul>
+                <li>Economia Descentralizada</li>
+                <li>Expansão Institucional</li>
+                <li>Revelação Financeira Completa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHITEPAPER -->
+    <section id="whitepaper" class="section wp-section">
+      <div class="wp-bg-pattern"></div>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Documento Oficial</div>
+          <h2 class="section-title">Whitepaper</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+          <p class="section-desc">
+            Versão 1.0 — Fundação GoldCoin International
+          </p>
+        </div>
+        <div class="wp-grid">
+          <div class="wp-cover">
+            <div class="wp-cover-inner">
+              <div class="wp-logo"><img src="assets/goldcoin-logo.png" alt=""></div>
+              <div class="wp-cover-title">GOLDCOIN</div>
+              <div class="wp-cover-sub">THE CURRENCY OF THE NEW ERA</div>
+              <div class="wp-divider">◆ ◆ ◆</div>
+              <div class="wp-version">WHITEPAPER OFICIAL — VERSÃO 1.0</div>
+              <div class="wp-org">FUNDAÇÃO GOLDCOIN INTERNATIONAL</div>
+            </div>
+          </div>
+          <div class="wp-chapters">
+            <div class="wp-chapter">
+              <span class="ch-num">01</span>
+              <div>
+                <h4>A Revelação</h4>
+                <p>
+                  O sistema financeiro moderno tornou-se rápido... mas vazio. A
+                  GoldCoin nasce como resposta.
+                </p>
+              </div>
+            </div>
+            <div class="wp-chapter">
+              <span class="ch-num">02</span>
+              <div>
+                <h4>O Que é a GoldCoin?</h4>
+                <p>
+                  Uma criptomoeda descentralizada de nova geração criada para
+                  unir comunidade, propósito e espiritualidade moderna.
+                </p>
+              </div>
+            </div>
+            <div class="wp-chapter">
+              <span class="ch-num">03–04</span>
+              <div>
+                <h4>Missão & Visão</h4>
+                <p>
+                  Tornar-se a principal moeda de integração social, empresarial
+                  e espiritual da nova era.
+                </p>
+              </div>
+            </div>
+            <div class="wp-chapter">
+              <span class="ch-num">05</span>
+              <div>
+                <h4>Tokenomics</h4>
+                <p>
+                  Supply máximo de 7.777.777 GLD com distribuição desenhada para
+                  garantir crescimento sustentável.
+                </p>
+              </div>
+            </div>
+            <div class="wp-chapter">
+              <span class="ch-num">06</span>
+              <div>
+                <h4>Proof of Alignment™</h4>
+                <p>
+                  Um conceito revolucionário onde o alinhamento comunitário gera
+                  valor real dentro da rede.
+                </p>
+              </div>
+            </div>
+            <div class="wp-chapter">
+              <span class="ch-num">07–12</span>
+              <div>
+                <h4>Roadmap, Segurança & Futuro</h4>
+                <p>
+                  A visão completa para a economia descentralizada da Nova Era e
+                  a mensagem final do Pastor Gaspar Dourado.
+                </p>
+              </div>
+            </div>
+            <a href="#" class="btn-primary wp-download" onclick="return false;">
+              <span>Descarregar Whitepaper PDF</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <div class="container">
+        <div class="quote-block">
+          <div class="quote-mark">"</div>
+          <blockquote>
+            O ouro sempre representou eternidade.<br />
+            A blockchain apenas revelou aquilo<br />
+            que Deus já sabia.
+          </blockquote>
+          <div class="quote-author">— Pastor Gaspar Dourado</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPRAR -->
+    <section id="comprar" class="section buy-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Junta-te à Nova Era</div>
+          <h2 class="section-title">Comprar GoldCoin</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="buy-steps">
+          <div class="buy-step">
+            <div class="step-num">1</div>
+            <h4>Cria a tua Wallet</h4>
+            <p>
+              Descarrega a App Oficial GoldCoin e configura a tua carteira
+              digital em menos de 2 minutos.
+            </p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="buy-step">
+            <div class="step-num">2</div>
+            <h4>Verifica a tua Identidade</h4>
+            <p>
+              Processo de verificação simples e seguro, protegido pelo IRD
+              Security Protocol.
+            </p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="buy-step">
+            <div class="step-num">3</div>
+            <h4>Adquire GLD</h4>
+            <p>
+              Compra GoldCoin com cartão, transferência bancária ou troca por
+              outras criptomoedas.
+            </p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="buy-step">
+            <div class="step-num">4</div>
+            <h4>Entra no Ecossistema</h4>
+            <p>
+              Começa a usar GLD em eventos, cursos, loja oficial e muito mais
+              dentro da comunidade.
+            </p>
+          </div>
+        </div>
+        <div class="buy-cta">
+          <a href="#" class="btn-primary btn-large" onclick="return false;">
+            <span>Começar Agora</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <p class="buy-note">
+            Disponível na App Store — Puerto Esperanza
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Dúvidas Frequentes</div>
+          <h2 class="section-title">FAQ</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q">
+              O que é a GoldCoin (GLD)?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                GoldCoin (GLD) é a criptomoeda oficial do ecossistema da Igreja
+                da Revelação Dourada dentro do servidor de roleplay Puerto
+                Esperanza. Criada para unir tecnologia, propósito e
+                espiritualidade, funciona sobre o protocolo IRD Chain com
+                mecanismo de consenso Proof of Alignment™.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Como posso comprar GoldCoin?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Podes adquirir GLD através da App Oficial GoldCoin, disponível
+                para iOS e Android. O processo é simples: cria uma wallet,
+                verifica a tua identidade pelo IRD Security Protocol, e compra
+                com cartão, transferência ou troca por outras criptomoedas.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              O que é o Proof of Alignment™?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Proof of Alignment™ é o mecanismo de consenso revolucionário da
+                GoldCoin. Diferente de sistemas baseados apenas em poder
+                computacional, premia utilizadores que contribuem para a
+                comunidade, mantêm estabilidade emocional, participam em eventos
+                e fortalecem a visão coletiva.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Qual é o supply total de GLD?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                O supply máximo de GoldCoin é de 7.777.777 GLD — um número com
+                profundo significado simbólico. A distribuição foi desenhada
+                para garantir crescimento sustentável: 40% para a comunidade,
+                20% para o ecossistema, 15% para a Fundação IRD, 15% para
+                reserva estratégica, e 10% para liquidez.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              Onde posso usar GoldCoin?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Dentro do ecossistema da Igreja da Revelação Dourada em Puerto
+                Esperanza, podes usar GLD em eventos VIP, cursos e mentorias,
+                retiros executivos, cursos da Revelação Dourada, livros,
+                merchandising oficial, mentorias, experiências exclusivas e
+                contribuições comunitárias.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              É seguro investir em GoldCoin?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-a">
+              <p>
+                A GoldCoin opera com total transparência e estabilidade. Todos
+                os protocolos são desenvolvidos com transparência, estabilidade
+                e visão de longo prazo. O IRD Security Protocol garante a
+                segurança de todas as transações e wallets dentro do
+                ecossistema.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-inner">
+          <div class="newsletter-text">
+            <h3>Receba Novidades</h3>
+            <p>
+              Inscreva-se e receba atualizações exclusivas sobre o ecossistema
+              GoldCoin e a Nova Era.
+            </p>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="O seu email" class="email-input" />
+            <button class="btn-primary" onclick="handleSubscribe(event)">
+              Inscrever
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTOS -->
+    <section id="contactos" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Fale Connosco</div>
+          <h2 class="section-title">Contactos</h2>
+          <div class="title-ornament">✦ ✦ ✦</div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <h4>Email</h4>
+            <p>info@goldcoin.ird</p>
+            <p>suporte@goldcoin.ird</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">◎</div>
+            <h4>Comunidade</h4>
+            <p>
+              Junta-te ao nosso grupo oficial em Puerto Esperanza e conecta-te
+              com outros holders.
+            </p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⬡</div>
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#" onclick="return false;">Trendy</a>
+              <a href="#" onclick="return false;">Instapic</a>
+              <a href="#" onclick="return false;">Birdy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo-emblem small"><img src="assets/goldcoin-logo.png" alt=""></div>
+              <div class="logo-text">
+                <span class="logo-name">GOLDCOIN</span>
+                <span class="logo-tagline">A Moeda da Nova Era</span>
+              </div>
+            </div>
+            <p class="footer-about">
+              GoldCoin é a criptomoeda oficial do ecossistema da Igreja da
+              Revelação Dourada em Puerto Esperanza.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h5>GoldCoin</h5>
+            <a href="#sobre">Sobre</a>
+            <a href="#comprar">Como Comprar</a>
+            <a href="#tokenomics">Wallet</a>
+            <a href="#whitepaper">Whitepaper</a>
+          </div>
+          <div class="footer-col">
+            <h5>Suporte</h5>
+            <a href="#faq">FAQ</a>
+            <a href="#contactos">Centro de Ajuda</a>
+            <a href="#contactos">Contactos</a>
+          </div>
+          <div class="footer-col">
+            <h5>Legal</h5>
+            <a href="#" onclick="return false;">Termos de Uso</a>
+            <a href="#" onclick="return false;">Política de Privacidade</a>
+            <a href="#" onclick="return false;">Aviso Legal</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2024 Igreja da Revelação Dourada — Puerto Esperanza. Todos os
+            direitos reservados.
+          </p>
+          <p class="footer-disclaimer">
+            Este é um projeto fictício para roleplay. GoldCoin não é uma
+            criptomoeda real. Qualquer semelhança com projetos reais é meramente
+            coincidência.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
