@@ -1539,3 +1539,134 @@ blockquote {
   .contact-grid { grid-template-columns: 1fr; }
   .section { padding: 4rem 0; }
 }
+
+/* ============================================================
+   READABILITY AND ACCESSIBILITY REFINEMENTS
+   ============================================================ */
+:root {
+  --text-secondary: #C7B27F;
+  --text-muted: #987C4E;
+}
+
+body {
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.section-desc,
+.sobre-text p,
+.newsletter-text p {
+  font-size: 1.15rem;
+}
+
+.pillar p,
+.eco-card p,
+.proof-block p,
+.proof-block li,
+.buy-step p,
+.faq-a p,
+.contact-card p,
+.footer-about {
+  font-size: 1.05rem;
+}
+
+.wp-chapter p,
+.phase-card li,
+.legend-item,
+.footer-col a {
+  font-size: 0.95rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-buy,
+.social-links a {
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  font-size: 0.86rem;
+}
+
+.section-eyebrow,
+.ticker-label,
+.stat-label,
+.buy-note {
+  font-size: 0.82rem;
+}
+
+.pillar,
+.eco-card,
+.phase-card,
+.wp-chapter,
+.buy-step,
+.contact-card,
+.proof-block {
+  border-color: rgba(201, 162, 39, 0.34);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 4px;
+}
+
+.logo-emblem img,
+.wp-logo img,
+.coin-letter img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.coin-letter {
+  width: 90%;
+  aspect-ratio: 1;
+}
+
+.coin-cross {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .pillar,
+  .eco-card,
+  .buy-step,
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .ticker-inner {
+    padding: 0 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
